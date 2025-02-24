@@ -6,7 +6,7 @@
   
   /* 单张图片 */
   .p-pics-1 {
-    grid-template-columns: minmax(0, 500px);
+    grid-template-columns: minmax(0, 300px);  
   }
   
   /* 两张图片 */
@@ -40,14 +40,14 @@
   /* 宽图片 */
   .p-pic-wide {
     grid-column: span 2;
-    height: 280px;
+    height: 180px;  
     object-fit: cover;
   }
   
   /* 高图片 */
   .p-pic-tall {
     grid-row: span 2;
-    height: 400px;
+    height: 260px; 
     object-fit: cover;
   }
   
@@ -58,7 +58,7 @@
   }
   
   .p-pic:hover {
-    transform: scale(1.02);
+    transform: scale(1.01);
   }
   
   /* 图片预览相关样式 */

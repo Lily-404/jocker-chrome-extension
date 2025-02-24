@@ -168,13 +168,8 @@ body {
     padding: 20px 24px;
     border-radius: 12px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    transition: all 0.2s ease;
   }
   
-  .post-default:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  }
   
   .p-content {
     color: #2c2c2c;
@@ -214,7 +209,7 @@ body {
   }
   
   .p-pic:hover {
-    transform: scale(1.02);
+    transform: scale(1.01); 
   }
   
   .p-link {

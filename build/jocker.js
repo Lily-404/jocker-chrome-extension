@@ -263,11 +263,12 @@ function loadPostsDefault(postsElem, nodes) {
     }
 
     if (post.video) {
-      const videoElem = document.createElement("video");
-      videoElem.setAttribute("controls", "controls");
-      videoElem.setAttribute("class", "p-video");
-      videoElem.setAttribute("src", post.video);
-      postElem.appendChild(videoElem);
+      const videoLink = document.createElement("a");
+      videoLink.setAttribute("class", "p-link");
+      videoLink.setAttribute("href", `https://web.okjike.com/originalPost/${post.id}`);
+      videoLink.setAttribute("target", "_blank");
+      videoLink.innerText = "查看视频动态 →";
+      postElem.appendChild(videoLink);
     }
 
     if (post.target) {
@@ -551,7 +552,15 @@ window.onkeydown = function (event) {
   }
 };
 
-function onload() {}
+function onload() {
+  // ... existing code ...
+  
+  // 添加图片预览遮罩层的关闭事件
+  const overlay = document.querySelector(".image-preview-overlay");
+  overlay.addEventListener("click", function() {
+    this.classList.remove("active");
+  });
+}
 
 document.addEventListener("DOMContentLoaded", function () {
   onload();
